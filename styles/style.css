@@ -55,7 +55,7 @@ ol {
 }
 
 .content {
-  height: 534px;
+  height: 58%;
   width: 1140px;
   display: flex;
   align-items: flex-end;
@@ -120,10 +120,10 @@ ol {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: Oswald;
+  font-family: Oswald, Roboto, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   margin-bottom: 6px;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 700;
 }
 
@@ -144,7 +144,9 @@ ol {
 }
 
 .content__card-link:active {
+  display: block;
   text-decoration: none;
+  background-color: #545050;
 }
 
 .content__list-item {
@@ -152,13 +154,13 @@ ol {
   padding-right: 3px;
 }
 
-.content__list-item:active {
-  background-color: #616161;
+.content__list-item:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
 }
 
-.content__list-item:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 2px;
+.content__card-link_current:active {
+  background-color: #545050;
 }
 
 .search-form {
@@ -197,11 +199,12 @@ ol {
   display: flex;
   align-items: center;
   gap: 5px;
+  cursor: pointer;
 }
 
 .search-form__textfield {
   appearance: none;
-  background-color: #1b1919;
+  background-color: #545050;
   border-style: solid;
   border-width: 2px 0;
   font-family: 'Fira Sans Condensed';
@@ -229,7 +232,6 @@ ol {
   height: 100%;
   width: 100%;
   opacity: 0;
-  cursor: pointer;
 }
 
 .search-form__label:hover .search-form__label-text {
@@ -245,24 +247,28 @@ ol {
 }
 
 .search-form__label:has(.search-form__checkbox:focus-visible) {
-  outline: 2px solid #fff;
+  outline: 1px solid #fff;
   outline-offset: 2px;
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 700;           /* Bold */
+  font-style: normal;        /* или вообще убрать — это значение по умолчанию */
   font-size: 75px;
-  font-weight: 700;
-  line-height: 94%;
+  line-height: 94%;          /* тут проценты допустимы */
+  letter-spacing: 0;         /* или 0px */
+  text-transform: uppercase;
 }
 
 .content__accent {
-  color: #616161;
+  color: #545050;
 }
 
 .button {
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   color: #fff;
   font-weight: 700;
@@ -274,7 +280,7 @@ ol {
 }
 
 .button:active {
-  background-color: #616161;
+  background-color: #545050;
 }
 
 .search-form__submit-button {
@@ -285,8 +291,8 @@ ol {
   margin: 3px;
 }
 
-button:focus-visible {
-  outline: 2px solid #fff;
+.button:focus-visible {
+  outline: 1px solid #fff;
   outline-offset: 2px;
 }
 
