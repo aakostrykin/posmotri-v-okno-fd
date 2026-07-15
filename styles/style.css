@@ -83,6 +83,7 @@ ol {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  position: relative;
 }
 
 .content__list {
@@ -146,15 +147,19 @@ ol {
   text-decoration: none;
 }
 
+.content__list-item {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
 .content__list-item:active {
   background-color: #616161;
 }
 
-/* .content__list-item:focus-visible {
-  outline: 5px   solid #fff;
+.content__list-item:focus-visible {
+  outline: 2px solid #fff;
   outline-offset: 2px;
-
-} */
+}
 
 .search-form {
   display: grid;
@@ -283,4 +288,8 @@ ol {
 button:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 2px;
+}
+
+.result__video-container {
+  position: relative;
 }
